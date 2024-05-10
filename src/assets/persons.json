@@ -1,0 +1,32 @@
+{
+  "persons": [
+    {
+      "id": 1,
+      "name": "Shamil",
+      "city": "kszhkde",
+      "salary": "15000",
+      "dob": "01/10/2000"
+    },
+    {
+      "id": 2,
+      "name": "Soumya",
+      "city": "alwaye",
+      "salary": 1.2,
+      "dob": "12/1/2000"
+    },
+    {
+      "id": 3,
+      "name": "Anas",
+      "city": "thrissur",
+      "salary": "17000",
+      "dob": "01/09/2001"
+    },
+    {
+      "id": 4,
+      "name": "lakshmi",
+      "city": "Ekm",
+      "salary": "15000",
+      "dob": "02/02/2000"
+    }
+  ]
+}

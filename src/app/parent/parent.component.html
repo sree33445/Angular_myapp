@@ -1,0 +1,13 @@
+<p>parent works!</p>
+
+<div class="card" style="width: 400px;">
+  <div class="card-body">
+     <h1>Parent Data</h1>
+     <input type="text" [(ngModel)]="dataToChild">
+     <h2>Parent Data</h2>
+     <p>{{childData}}</p>
+   </div>
+</div>
+<hr>
+
+<app-child [parentData]="dataToChild"  (childToParent)="updateChild($event)"></app-child>

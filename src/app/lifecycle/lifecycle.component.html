@@ -1,0 +1,14 @@
+<h1>Life Cycle Hooks</h1>
+
+<h2>Parent Component</h2>
+Enter something:
+<input type="text" [(ngModel)]="childValue">
+<br>
+<br>
+<h3>Simple Form</h3>
+<p>Product Name: <input type="text" [(ngModel)]="name "></p>
+<p>Product Price: <input type="text" [(ngModel)]="price"></p>
+<p><button (click)="updateProduct()">Update Product</button></p>
+<button (click)="toggle()">Show / Hide</button>
+
+<app-lifechild *ngIf="show" [fromParent]="childValue" [childProduct]="product"></app-lifechild>

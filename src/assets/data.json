@@ -1,0 +1,67 @@
+{
+  "users": [
+    {
+      "id": "123",
+      "firstname": "sree",
+      "email": "sreerajs00000@gmail.com",
+      "phone": 8289979157,
+      "country": "India"
+    },
+    {
+      "id": "123",
+      "firstname": "sree",
+      "email": "sreerajs00000@gmail.com",
+      "phone": 8289979157,
+      "country": "India"
+    },
+    {
+      "id": "123",
+      "firstname": "sree",
+      "email": "sreerajs00000@gmail.com",
+      "phone": 8289979157,
+      "country": "India"
+    },
+    {
+      "id": "123",
+      "firstname": "sree",
+      "email": "sreerajs00000@gmail.com",
+      "phone": 8289979157,
+      "country": "India"
+    },
+    {
+      "id": "1234",
+      "firstname": "Johnson",
+      "email": "sree@99.com",
+      "phone": 1234556744,
+      "country": "India"
+    },
+    {
+      "id": "1234",
+      "firstname": "Johnson",
+      "email": "sree@99.com",
+      "phone": 1234556744,
+      "country": "India"
+    },
+    {
+      "id": "1234",
+      "firstname": "Johnson",
+      "email": "sree@99.com",
+      "phone": 1234556744,
+      "country": "India"
+    },
+    {
+      "id": "1234",
+      "firstname": "Johnson",
+      "email": "sree@99.com",
+      "phone": 1234556744,
+      "country": "India"
+    },
+    {
+      "id": "123",
+      "firstname": "sree",
+      "email": "abcd@ghi.com",
+      "phone": 8855785557,
+      "country": "India"
+    }
+  ]
+}

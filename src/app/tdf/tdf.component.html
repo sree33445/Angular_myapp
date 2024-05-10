@@ -1,0 +1,50 @@
+<div class="container text-justify">
+    <h1>User Management Form</h1>
+  <form #userForm="ngForm" (ngSubmit)="onSubmit()">
+    {{userForm.value | json}}
+    <br>
+    {{user | json}}
+    <div class="form-group mt-2">
+      <label for="id">ID</label>
+      <input required minlength="3" type="text " class="form-control" #id="ngModel" name="id" [(ngModel)]="user.id" [class.is-invalid]="id.invalid && id.touched" />
+      <div *ngIf="id.invalid  &&  (id.dirty || id.touched)">
+        <div *ngIf="id.errors?. ['minlength']">
+          <small class="text-danger">Min length should be 3 digits </small>
+        </div>
+        <div *ngIf="id.errors?.['required']">
+          <small class="text-danger">Id is required</small>
+        </div>
+      </div>
+    </div>
+    <div class="form-group mt-2">
+      <label for="firstname">Firstname</label>
+      <input required type="text " class="form-control" #firstName="ngModel" name="firstname" [(ngModel)]="user.firstname" [class.is-invalid]="firstName.invalid && firstName.touched" />
+      <div *ngIf="firstName.invalid  &&  (firstName.dirty || firstName.touched)">
+        <small class="text-danger">Name is required</small>
+      </div>
+    </div>
+
+    <div class="form-group mt-2">
+      <label for="email">Email</label>
+      <input email type="text" class="form-control" #email="ngModel" name="email" [(ngModel)]="user.email"  />
+      <div *ngIf="email.errors?.['email']">
+        <small class="text-danger">Check email format</small>
+      </div>
+    </div>
+    <div class="form-group mt-2">
+      <label for="phone">Phone</label>
+      <input pattern="^\d{10}$" type="number" class="form-control" #phone="ngModel" name="phone" [(ngModel)]="user.phone" [class.is-invalid]="phone.invalid && phone.touched" />
+    </div>
+    <div class="form-group mt-2">
+      <label for="contry">Country</label>
+      <select name="country" id="" class="form-select" [(ngModel)]="user.country">
+        <option *ngFor="let country of countries"  value={{country}}>{{country}}</option>
+      </select>
+    </div>
+    <button [disabled]="!userForm.valid" class="btn btn-outline-primary mt-3" >Submit</button>
+  </form>
+
+    <p>Form validity: {{userForm.valid}}</p>
+    <p>Form is touched: {{userForm.touched}}</p>
+
+</div>

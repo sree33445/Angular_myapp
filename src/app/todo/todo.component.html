@@ -1,0 +1,16 @@
+<div class="container">
+    <h1 class="txt text-success">To Do List</h1>
+    <div>
+        <input type="text" placeholder="Enter subject to learn" #item>
+    </div>
+     <p><button class="btn btn-outline-secondary mt-3" (click)="addSubject(item.value)">Add Subject</button></p>
+     <br>
+     <h3 class="text-decoration-underline">Your To Do List</h3>
+
+     <div *ngFor="let subject of subjectArray">
+        <ul>
+            <li>{{subject.id}}. {{subject.name}} <button class="btn btn-outline-danger" (click)="removeItem(subject.id)">Delete</button> </li>
+        </ul>
+      
+     </div>
+</div>

@@ -1,0 +1,31 @@
+<h1 class="txt text-success">User details</h1>
+<div *ngIf="users.length > 0; else nousers">
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Username</th>
+        <th scope="col">Email</th>
+        <!-- <th scope="col">Dob</th> -->
+        <!-- <th scope="col">Age</th> -->
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users | paginate:{itemsPerPage:3, currentPage: p}">
+        <th scope="row"><a [routerLink]="['/user', user.id]">{{user.id}}</a> </th>
+        <td>{{user.name}}</td>
+        <td>{{user.username | lowercase}}</td>
+        <td>{{user.email}}</td>
+        <!-- <td>{{user.dob | date:'shortDate'}}</td> -->
+        <!-- <td>{{user.dob | age | square}}</td> -->
+      </tr>
+    </tbody>
+  </table>
+   <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>
+
+<ng-template #nousers>
+ <h3 class="text-danger">{{errorMessage}}</h3>
+
+</ng-template>

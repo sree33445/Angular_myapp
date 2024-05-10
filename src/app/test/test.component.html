@@ -1,0 +1,73 @@
+<p>test works!</p>
+
+<input type="text" placeholder="Enter a name" [(ngModel)]="personName" />
+
+{{ personName }}
+
+<p>------</p>
+
+<div>
+  <input type="text" #inputref>
+  <button (click)="logMessage(inputref.value)">Show data</button>
+</div>
+
+<h2>Structural Directives</h2>
+
+<div *ngIf="show; then thenBlock; else elseBlock">
+
+
+</div>
+
+<ng-template #thenBlock>
+  <h2>Expertz</h2>
+</ng-template>
+
+<ng-template #elseBlock>
+  <h2>No name to display</h2>
+</ng-template>
+
+<div>
+  Show message : <input type="checkbox" [(ngModel)]="show" />
+</div>
+
+<p *ngIf="show">Message is checked</p>
+
+<p *ngIf="!show">Message is unchecked</p>
+
+<br>
+<br>
+
+<div *ngFor="let fruit of fruits; index as i">
+
+  {{ i }} . {{ fruit }}
+
+</div>
+<br>
+
+<div *ngFor="let person of persons">
+  <p *ngIf="person.gender === 'female'">
+    {{person.name}}
+  </p>
+</div>
+
+<select>
+  <option *ngFor="let person of persons" value="">
+    {{person.name}}
+  </option>
+</select>
+
+<br>
+<br>
+
+<div [ngSwitch]="color">
+  <div *ngSwitchCase="'blue'">You picked blue color</div>
+  <div *ngSwitchCase="'red'">You picked red color</div>
+  <div *ngSwitchCase="'green'">You picked green color</div>
+</div>
+
+<input type="text" [(ngModel)]="num" />
+ <div [ngSwitch]="num">
+  <div *ngSwitchCase="'1'">One</div>
+  <div *ngSwitchCase="'2'">Two</div>
+  <div *ngSwitchCase="'3'">Three</div>
+ </div>
